@@ -1,3 +1,3 @@
-const say = "Hello world"
+const say = "Hello world ✅"
 
 console.log(say)
