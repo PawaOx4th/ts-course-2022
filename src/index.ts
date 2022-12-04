@@ -1,3 +1,3 @@
-const say = "Hello world ✅"
+const a = new Date().toISOString()
 
-console.log(say)
+console.log()
