@@ -1,0 +1,14 @@
+{
+  "name": "ts-course-2022",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "pawaox4th@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.10",
+    "typescript": "^4.9.3"
+  }
+}
