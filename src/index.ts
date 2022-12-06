@@ -1,3 +1,6 @@
-const a = new Date().toISOString()
-
-console.log()
+import "./voidAndNever"
+import "./typeAssertions"
+import "./array"
+import "./tuples"
+import "./enum"
+import "./interface"
