@@ -23,7 +23,7 @@ const tar: RoleType = "develop"
 type Age = number | string
 const myAge: Age = "23year"
 
-type Employee = {
+export type Employee = {
   role: RoleType
   age: Age
 }
@@ -32,7 +32,7 @@ const myEmployee: Employee = {
   age: 23
 }
 
-type Company = {
+export type Company = {
   companyName: "A" | "B" | "C"
   address: string
 }
@@ -45,7 +45,7 @@ type Personal = Company &
 
 const myCompany: Company["companyName"] = "B"
 
-const personal: Personal = {}
+// const personal: Personal = {}
 
 // type OnSumResult = (a: number, b: number) => number
 
