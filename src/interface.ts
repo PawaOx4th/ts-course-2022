@@ -3,27 +3,36 @@
 //   onGetAge: () => number
 // }
 
-// interface PeopleEntity {
-//   name: string
-//   age: number
-//   birthDate: string
-//   tel: number
-//   status: "single" | "marry"
-//   email: string
-//   onGetName: () => string
-// }
+interface PeopleEntity {
+  name: string
+  age: number
+  birthDate: string
+  tel: number
+  status: "single" | "marry"
+  email: string
+  onGetName: () => string
+  onCalculateYearOfAge: () => number
+}
 
-// const people: PeopleEntity = {
-//   name: "John",
-//   age: 18,
-//   birthDate: "2015-12-12",
-//   status: "single",
-//   tel: 12345678,
-//   email: "john@example.com",
-//   onGetName() {
-//     return this.name
-//   }
-// }
+const y = new Date().getFullYear()
+const people: PeopleEntity = {
+  name: "John",
+  age: 18,
+  birthDate: "2004-12-12",
+  status: "single",
+  tel: 12345678,
+  email: "john@example.com",
+  onGetName: function () {
+    return this.name.toUpperCase()
+  },
+  onCalculateYearOfAge: function () {
+    const myYear = y - this.age
+    return myYear
+  }
+}
+
+console.log("🟡  :", people.onGetName())
+console.log("🟡  :", people.onCalculateYearOfAge())
 
 // interface Fruits {
 //   [index: number]: string
