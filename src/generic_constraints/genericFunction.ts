@@ -2,7 +2,10 @@
  * Lesson : Generic Functions.
  */
 
-function lastNum(arr: any, count: number) {
+// function lastNum<T>(arr: T[], count: number) {
+//   return arr.slice(arr.length - count)
+// }
+const lastNum = <T>(arr: T[], count: number) => {
   return arr.slice(arr.length - count)
 }
 

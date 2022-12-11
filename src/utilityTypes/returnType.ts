@@ -15,3 +15,4 @@ type Fn = typeof get
 
 // * type myGetReturnType = string | number
 // type myGetReturnType = MyGetReturnType<Fn>;
+type myGetReturnType = ReturnType<Fn>

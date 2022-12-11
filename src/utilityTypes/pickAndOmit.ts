@@ -8,14 +8,14 @@ type Person = {
   address: string
 }
 
-type MyPick
+type MyPick = Pick<Person, "address">
 //    type NameAndAge = {
 //      name: string;
 //      age: number;
 // }
 // TODO: type MyNameAndAge = MyPick<Person, "name" | "age">
 
-type MyOmit
+type MyOmit = Omit<Person, "name">
 // type MyAddress s = {
 //      address: string;
 // }

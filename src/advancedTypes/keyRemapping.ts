@@ -2,7 +2,12 @@
  * Lesson : Key Remapping.
  ****************************************************************/
 
-type Person = {
+// type Person = {
+//   name: string
+//   age: number
+// }
+
+interface Person {
   name: string
   age: number
 }
@@ -12,15 +17,21 @@ type Person = {
  * Example.
  */
 // type PersonSubscribers = {
-//   name: (key: "nam e", value: string) => void
+//   name: (key: "name", value: string) => void
 //   age: (key: "age", value: number) => void
 // }
+type PersonSubscribers = {
+  [K in keyof Person]: (key: K, value: Person[K]) => void
+}
 
 /**
  * TODO: 2
  * Example.
  */
 // type PersonSubscribersAddChangeWord = {
-//   nameChange: (key: "name", value: string) => void;
-//   ageChange: (key: "age", value: number) => void;
+//   nameOnChange: (key: "name", value: string) => void;
+//   ageOnChange: (key: "age", value: number) => void;
 // }
+type PersonSubscribersAddChangeWord = {
+  [K in keyof Person as `${K}OnChange`]: (key: K, value: Person[K]) => void
+}

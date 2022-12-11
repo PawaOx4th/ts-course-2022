@@ -5,4 +5,5 @@
 // import "./enum"
 // import "./interface"
 // import "./type_alias"
-// import "./keyof"
+// import "./advancedTypes/keyof"
+import "./generic_constraints/genericType"

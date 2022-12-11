@@ -7,9 +7,10 @@
 /**
  * TODO: Example 1
  */
-type NumOrString = string[]
+type NumOrString = string[] | number[] | boolean | undefined
 
-// type ArrayOnly = ?
+type ArrayOnly<T> = T extends unknown[] ? T : never
+type Dummy = ArrayOnly<NumOrString>
 
 /**
  * TODO: Example 2
@@ -25,6 +26,11 @@ const person = {
   }
 }
 
-// type Person = typeof person
+type Person = typeof person
+
+type PersonFunctionKeys<T> = {
+  [K in keyof T]: T[K] extends Function ? K : never
+}[keyof T]
+
 // DESC: type PersonFunctionKeys = "getName" | "getAge"
-// type PersonFunctionKeys = FunctionPropkeysePerbone<Person>
+type PersonFunctionKeysResult = PersonFunctionKeys<Person>

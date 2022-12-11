@@ -10,6 +10,9 @@ interface Course {
 //   readonly title : string
 //   readonly credit : number
 // }
+type CourseReadOnly = {
+  readonly [K in keyof Course]: Course[K]
+}
 
 /**
  * TODO: 2.
@@ -19,6 +22,9 @@ interface Course {
 //  readonly credit : number
 //  description : string
 // }
+type CourseReadOnlyWithDescription = CourseReadOnly & {
+  description: string
+}
 
 /**
  * TODO: 3.
@@ -27,8 +33,14 @@ interface Course {
 //   title?: string
 //   credit?: number
 // }
+type CourseOptional = {
+  [K in keyof Course]?: Course[K]
+}
 
 /**
  * TODO: 4.
  * Without  `?`
  */
+type CourseOptionalWithDescription = {
+  [K in keyof CourseOptional]-?: CourseOptional[K]
+}
