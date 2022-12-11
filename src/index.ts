@@ -4,4 +4,5 @@
 // import "./tuples"
 // import "./enum"
 // import "./interface"
-import "./type_alias"
+// import "./type_alias"
+// import "./keyof"
