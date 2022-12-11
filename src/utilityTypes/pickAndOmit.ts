@@ -8,17 +8,15 @@ type Person = {
   address: string
 }
 
-type MyPick<T, K extends keyof T> = {
-  [P in K]: T[P]
-}
+type MyPick
 //    type NameAndAge = {
 //      name: string;
 //      age: number;
 // }
-type MyNameAndAge = MyPick<Person, "name" | "age">
+// TODO: type MyNameAndAge = MyPick<Person, "name" | "age">
 
-type MyOmit<T, K extends keyof T> = MyPick<T, Exclude<keyof T, K>>
+type MyOmit
 // type MyAddress s = {
 //      address: string;
 // }
-type MyAddress = MyOmit<Person, "name" | "age">
+// TODO: type MyAddress = MyOmit<Person, "name" | "age">
